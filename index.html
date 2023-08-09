@@ -11,16 +11,16 @@
 
         document.addEventListener("DOMContentLoaded", function () {
             // Your code here
-            yourFunction();
+            randomlyPickADiningPlace();
         });
 
-        function yourFunction() {
+        function randomlyPickADiningPlace() {
             console.log("Function executed after DOMContentLoaded");
             const array = [{
                 name: "KFC",
                 address: "Jurong"
             }, {
-                name: "MacDonalds",
+                name: "McDonald's",
                 address: "TradeHub"
             }, {
                 name: "Long John Silver's",
@@ -34,6 +34,20 @@
             name.innerText = item.name
             const address = document.getElementById("address");
             address.innerText = item.address
+
+        }
+
+        function renderButtonA() {
+            //
+        }
+
+        function renderButtonB() {
+            //
+        }
+
+        function toggle() {
+            //delete B render A
+            //delete A render B
         }
     </script>
 
@@ -41,15 +55,20 @@
 
 <body>
     <div class="grid grid-cols-2 gap-4 bg-indigo-500 w-2/5">
-        <div>Recommended Location</div>
-        <div id="name">HomeTeamNS-BukitBatok KFC</div>
-        <div>Address</div>
-        <div id="address">Bukit Gombak</div>
+        <div class="px-6 py-2 h-15 w-full outline">Recommended Location</div>
+        <div id="name" class="px-6 py-2 h-15 w-full outline"></div>
+        <div class="px-6 py-2 h-15 w-full outline">Address</div>
+        <div id="address" class="px-6 py-2 h-15 w-full outline"></div>
     </div>
     <div>
-        <div class="inline-block px-6 py-2 h-12 rounded-lg justify-center items-center hover:bg-sky-400 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 text-gray-100 font-semibold">RoulEats!</div>
-        <div class="inline-block px-6 py-2 h-12 rounded-lg justify-center items-center hover:bg-slate-700 bg-slate-900 text-gray-100 font-semibold">Submit New Location</div>
+        <div id="randomizeButton"
+            class="inline-block px-6 py-2 h-12 rounded-lg justify-center items-center hover:bg-sky-400 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 text-gray-100 font-semibold"
+            onclick="randomlyPickADiningPlace()">RoulEats!</div>
+        <div
+            class="inline-block px-6 py-2 h-12 rounded-lg justify-center items-center hover:bg-slate-700 bg-slate-900 text-gray-100 font-semibold">
+            Submit New Location</div>
     </div>
+    <div>Donald trump</div>
 </body>
 
 
